@@ -42,11 +42,14 @@ class gpt:
             # 获取用户输入
             user_input = input("> ")
             user_message={"role": "user", "content": user_input}
+            # 将用户输入添加到messages中
             messages.append(user_message)
             # 发送API请求
             response = self.send_request(messages)
             # 输出API返回内容
-            print("助手：",response["content"])
+            print("ChatBot：",response["content"])
+            
+            #将API接口返回的内容添加至messages，以用作多轮对话
             messages.append(response)
             # 如果API返回的内容包含"goodbye"，则结束对话循环
             if "goodbye" in user_input:
