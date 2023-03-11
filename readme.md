@@ -30,7 +30,7 @@ python chat.py
 
 ### 配置代理服务器
 
-如果你需要使用代理服务器来访问 ChatGPT API，可以在 `config.py` 中进行配置。只需要将 `USE_PROXY` 设置为 True，并在 `PROXY_URL` 中填写代理服务器地址即可。
+如果你需要使用代理服务器来访问 ChatGPT API，可以在 `chat.py` 中进行配置,在 `PROXY_URL` 中填写代理服务器地址即可。
 
 ## 注意事项
 
